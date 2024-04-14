@@ -10,7 +10,7 @@ stages {
   stage('Git checkout') {	
   agent {label 'docker'}
     steps {
-      checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/chaithra0317/kubernetes-fleetapp-project.git']])
+      checkout scmGit(branches: [[name: '*/helm']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/chaithra0317/kubernetes-fleetapp-project.git']])
     }
   }
 
