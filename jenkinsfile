@@ -17,11 +17,11 @@ stages {
   stage('build') {	
   agent {label 'docker'}
     steps {
-      sh 'docker build -t richardchesterwood/k8s-fleetman-queue:release2' 
-	  sh 'docker build -t richardchesterwood/k8s-fleetman-position-simulator:release2' 
-	  sh 'docker build -t richardchesterwood/k8s-fleetman-position-tracker:release2' 
-	  sh 'docker build -t richardchesterwood/k8s-fleetman-api-gateway:release2' 
-	  sh 'docker build -t richardchesterwood/k8s-fleetman-webapp-angular:release2' 
+      sh "docker build -t richardchesterwood/k8s-fleetman-queue:release2 ." 
+      sh "docker build -t richardchesterwood/k8s-fleetman-position-simulator:release2 ." 
+      sh "docker build -t richardchesterwood/k8s-fleetman-position-tracker:release2 ." 
+      sh "docker build -t richardchesterwood/k8s-fleetman-api-gateway:release2 ."
+      sh "docker build -t richardchesterwood/k8s-fleetman-webapp-angular:release2 ." 
     }
   }
  
