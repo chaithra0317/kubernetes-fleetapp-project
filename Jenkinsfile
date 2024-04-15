@@ -14,7 +14,7 @@ pipeline {
     
 		stage ( 'deploying to k8s' ) {
 			steps {
-				sh "helm upgrade --install $helmchartname"
+				sh "helm upgrade --install $helmchartname helmchat1"
 			}
 		}
 	}
