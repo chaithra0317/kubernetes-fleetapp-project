@@ -2,6 +2,7 @@ pipeline {
 	agent { label 'k8s' }
 	environment {
 		helmchartname="fleethelm"
+		releasename="helmchart1"
   }
 
 	stages {
@@ -14,7 +15,7 @@ pipeline {
     
 		stage ( 'deploying to k8s' ) {
 			steps {
-				sh "helm upgrade --install $helmchartname helmchart1"
+				sh "helm upgrade --install $releasename /home/ubuntu/helm/$helmchartname "
 			}
 		}
 	}
